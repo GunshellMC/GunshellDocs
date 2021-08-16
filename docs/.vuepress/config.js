@@ -4,7 +4,6 @@ module.exports = {
     postcss: {
         plugins: [
             require('css-prefers-color-scheme/postcss'),
-            require('autoprefixer')
         ]
     },
     title: 'MT-Wapens',
