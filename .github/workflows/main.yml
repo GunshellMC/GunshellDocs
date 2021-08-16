@@ -1,0 +1,24 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+      
+    - name: Install dependencies
+      run: yarn install
+      
+    - name: Build
+      run: yarn vuepress build
+      
+    - name: Deploy
+      if: github.ref == 'refs/heads/master'
+      uses: peaceiris/actions-gh-pages@v2.2.0
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }} 
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./docs/.vuepress/dist
