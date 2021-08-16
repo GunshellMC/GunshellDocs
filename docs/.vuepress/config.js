@@ -1,5 +1,6 @@
 // .vuepress/config.js
 module.exports = {
+	base: '/docs',
 	title: 'MT-Wapens',
 	description: 'Met deze plugin voeg je wapens toe aan jouw Minetopia server.',
 	head: [
