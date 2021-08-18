@@ -1,5 +1,11 @@
 // .vuepress/config.js
 module.exports = {
+	base: '/',
+	postcss: {
+		plugins: [
+			require('css-prefers-color-scheme/postcss'),
+		]
+	},
 	title: 'MT-Wapens',
 	description: 'De officiële MT-Wapens V3 documentation.',
 	head: [
