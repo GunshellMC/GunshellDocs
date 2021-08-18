@@ -18,7 +18,7 @@ De developer API is beschikbaar via jitpack.io. Om deze te gebruiken moet je dit
 	<dependency>
 	    <groupId>com.github.jazzkuh</groupId>
 	    <artifactId>MT-Wapens</artifactId>
-	    <version>2.0.22</version>
+	    <version>3.4</version>
 	</dependency>
 ```
 :::
