@@ -8,7 +8,7 @@
     <link rel="icon" href="/mtwapens.png">
     <meta name="description" content="De officiële MT-Wapens V3 documentation.">
     
-    <link rel="preload" href="/assets/css/0.styles.68701159.css" as="style"><link rel="preload" href="/assets/js/app.1fcf7994.js" as="script"><link rel="preload" href="/assets/js/2.c8e5b4f9.js" as="script"><link rel="preload" href="/assets/js/15.f8663b85.js" as="script"><link rel="prefetch" href="/assets/js/10.dbd9051e.js"><link rel="prefetch" href="/assets/js/11.2a516bc5.js"><link rel="prefetch" href="/assets/js/12.ad55e487.js"><link rel="prefetch" href="/assets/js/13.286ffe33.js"><link rel="prefetch" href="/assets/js/14.48557e3b.js"><link rel="prefetch" href="/assets/js/3.82559af2.js"><link rel="prefetch" href="/assets/js/4.6ae2b2c5.js"><link rel="prefetch" href="/assets/js/5.f8764661.js"><link rel="prefetch" href="/assets/js/6.e777f6bc.js"><link rel="prefetch" href="/assets/js/7.70322f61.js"><link rel="prefetch" href="/assets/js/8.53c295e4.js"><link rel="prefetch" href="/assets/js/9.89e91601.js">
+    <link rel="preload" href="/assets/css/0.styles.68701159.css" as="style"><link rel="preload" href="/assets/js/app.454a72a3.js" as="script"><link rel="preload" href="/assets/js/2.c8e5b4f9.js" as="script"><link rel="preload" href="/assets/js/15.ed563c99.js" as="script"><link rel="prefetch" href="/assets/js/10.dbd9051e.js"><link rel="prefetch" href="/assets/js/11.2a516bc5.js"><link rel="prefetch" href="/assets/js/12.ad55e487.js"><link rel="prefetch" href="/assets/js/13.286ffe33.js"><link rel="prefetch" href="/assets/js/14.48557e3b.js"><link rel="prefetch" href="/assets/js/3.82559af2.js"><link rel="prefetch" href="/assets/js/4.6ae2b2c5.js"><link rel="prefetch" href="/assets/js/5.f8764661.js"><link rel="prefetch" href="/assets/js/6.e777f6bc.js"><link rel="prefetch" href="/assets/js/7.70322f61.js"><link rel="prefetch" href="/assets/js/8.53c295e4.js"><link rel="prefetch" href="/assets/js/9.89e91601.js">
     <link rel="stylesheet" href="/assets/css/0.styles.68701159.css">
   </head>
   <body>
@@ -26,7 +26,8 @@
 <code>sudo certbot certonly -d test.tiebienotjuh.be</code>
 test.tiebienotjuh.be vervangen door jouw domein</p></blockquote> <p>Stap <strong>4</strong>)</p> <blockquote><p>Maak een nginx config bestand door onderstaand commando uit te voeren:
 <code>sudo nano /etc/nginx/sites-available/reverse.conf</code>
-plaats onderstaande text in het config bestand.</p></blockquote> <div class="language-server { extra-class"><pre class="language-text"><code>    listen 80;
+plaats onderstaande text in het config bestand.</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>server {
+    listen 80;
     server_name &lt;DOMAIN&gt;;
 
     return 301 https://$server_name$request_uri;
@@ -55,7 +56,8 @@ https://dash.cloudflare.com/profile/api-tokens</p></blockquote> <p>Stap <strong>
 Vervang <code>GLOBALAPIKEY</code> door de key die u bij stap 3 hebt opgehaald.
 Vervang <code>JOUWCLOUDFLAREEMAIL</code> door het email die bij stap 1 hebt meegegeven bij de installatie van acme.sh</p></blockquote> <p>Stap <strong>5</strong>)</p> <blockquote><p>Maak een nginx config bestand door onderstaand commando uit te voeren:
 <code>sudo nano /etc/nginx/sites-available/reverse.conf</code>
-plaats onderstaande text in het config bestand.</p></blockquote> <div class="language-server { extra-class"><pre class="language-text"><code>    listen 80;
+plaats onderstaande text in het config bestand.</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>server {
+    listen 80;
     server_name &lt;DOMAIN&gt;;
 
     return 301 https://$server_name$request_uri;
@@ -86,6 +88,6 @@ Restart nginx en normaal gezien is je site nu bereikbaar via het ingestelde dome
       <a href="/config/grenades.html" class="prev">
         Grenade Config
       </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.1fcf7994.js" defer></script><script src="/assets/js/2.c8e5b4f9.js" defer></script><script src="/assets/js/15.f8663b85.js" defer></script>
+    <script src="/assets/js/app.454a72a3.js" defer></script><script src="/assets/js/2.c8e5b4f9.js" defer></script><script src="/assets/js/15.ed563c99.js" defer></script>
   </body>
 </html>
