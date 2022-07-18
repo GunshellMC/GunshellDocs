@@ -37,6 +37,13 @@ module.exports = {
 					'/config/ammo',
 					'/config/grenades',
 				]
+			},
+			{
+				title: 'Tutorials',
+				collapsable: false,
+				children: [
+					'/tutorials/reverse-proxy'
+				]
 			}
 		]
 	}
