@@ -26,7 +26,8 @@ Stap **4**)
 > ``sudo nano /etc/nginx/sites-available/reverse.conf``
 > plaats onderstaande text in het config bestand.
 
-```server {
+```
+server {
     listen 80;
     server_name <DOMAIN>;
 
@@ -88,7 +89,8 @@ Stap **5**)
 > ``sudo nano /etc/nginx/sites-available/reverse.conf``
 > plaats onderstaande text in het config bestand.
 
-```server {
+```
+server {
     listen 80;
     server_name <DOMAIN>;
 
