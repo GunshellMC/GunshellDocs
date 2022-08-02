@@ -6,21 +6,20 @@ module.exports = {
 			require('css-prefers-color-scheme/postcss'),
 		]
 	},
-	title: 'MT-Wapens',
-	description: 'De officiële MT-Wapens V3 documentation.',
+	title: 'Gunshell Documentation',
+	description: 'This is the documentation for Gunshell.',
 	head: [
-		['link', { rel: 'icon', href: '/mtwapens.png' }]
+		['link', { rel: 'icon', href: '/gunshell.png' }]
 	],
 	theme: "yuu",
 	themeConfig: {
-		logo: '/mtwapens.png',
+		logo: '/gunshell.png',
 		nav: [
-			{ text: 'Discord', link: 'https://discord.gg/AvRpCUZ' },
-			{ text: 'Admin Panel', link: 'https://dash.mtwapens.nl' }
+			{ text: 'Discord', link: 'https://discord.gg/AvRpCUZ' }
 		],
 		sidebar: [
 			{
-				title: 'MT-Wapens V3',
+				title: 'Gunshell Documentation',
 				collapsable: false,
 				children: [
 					'/',
@@ -34,8 +33,9 @@ module.exports = {
 				children: [
 					'/config/config',
 					'/config/weapons',
-					'/config/ammo',
-					'/config/grenades',
+					'/config/ammunition',
+					'/config/throwables',
+					'/config/melee',
 				]
 			},
 			{

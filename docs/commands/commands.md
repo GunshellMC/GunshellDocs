@@ -1,26 +1,15 @@
 # Commands
-Hier vind je alle mogelijke commands en de daarbij horende permissions.\
+Here you will find all possible commands that can be used in the plugin.
 <> = Required, [] = Optional
 
-## /mtwapens
-**Beschrijving:** Algemene command van de MTWapens plugin.\
+## /gunshell
+**Description:** All commands related to the Gunshell plugin.
 **Subcommands:**\
-| Subcommand                        | Permission                        | Beschrijving |
+| Subcommand                        | Permission                        | Description |
 | :------------------------------- | :------------------------------- | :----------- |
-| reload       | mtwapens.command.mtwapens.reload                        | Reload the plugin |
-| menu       | mtwapens.command.mtwapens.menu                        | Grab ammo, weapons or grenades from a menu. |
-
-## /getweapon
-**Usage:** <weaponType> <durability> [player]\
-**Beschrijving:** Grab a weapon from the config files.\
-**Permission:** mtwapens.command.getweapon\
-
-## /getammo
-**Usage:** <ammoType> [player]\
-**Beschrijving:** Grab ammo from the config files.\
-**Permission:** mtwapens.command.getammo\
-
-## /getgrenade
-**Usage:** <grenadeType> <uses> [player]\
-**Beschrijving:** Grab a grenade from the config files.\
-**Permission:** mtwapens.command.getgrenade\
+| info       | gunshell.commands.gunshell.info                        | Shows information about the plugin. |
+| reloadconfig       | gunshell.commands.gunshell.reloadconfig                        | Reload the plugins configuration files. |
+| getweapon <weaponType> <durability> [player]       | gunshell.commands.gunshell.getweapon                        | Get a weapon from the config. |
+| getammo <ammoType> [player]       | gunshell.commands.gunshell.getammo                        | Get ammo from the config files. |
+| getthrowable <throwableType> [player]       | gunshell.commands.gunshell.getthrowable                        | Get a throwable from the config. |
+| getmelee <meleeType> <durability> [player]       | gunshell.commands.gunshell.getmelee                        | Get a melee weapon from the config. |
