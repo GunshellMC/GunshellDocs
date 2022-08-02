@@ -1,7 +1,10 @@
 # Developer API
 
+The developer API is available via jitpack.io. To use it, you need to add it to your pom.xml or build.gradle file:
 
-De developer API is beschikbaar via jitpack.io. Om deze te gebruiken moet je dit toevoegen aan je pom.xml of build.gradle bestand:
+::: warning
+The developer api has not been updated for the latest version of Gunshell yet.
+:::
 
 ## Maven
 ::: details Maven
@@ -17,23 +20,8 @@ De developer API is beschikbaar via jitpack.io. Om deze te gebruiken moet je dit
 ```xml
 	<dependency>
 	    <groupId>com.github.jazzkuh</groupId>
-	    <artifactId>MT-Wapens</artifactId>
-	    <version>3.4</version>
+	    <artifactId>Gunshell</artifactId>
+	    <version>1.0</version>
 	</dependency>
-```
-:::
-
-## Gradle
-::: details Gradle
-```css
-	repositories {
-			maven { url 'https://jitpack.io' }
-	}
-```
-
-```css
-	dependencies {
-	        implementation 'com.github.jazzkuh:MT-Wapens:2.0.22'
-	}
 ```
 :::

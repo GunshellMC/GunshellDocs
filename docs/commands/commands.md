@@ -1,10 +1,10 @@
 # Commands
-Here you will find all possible commands that can be used in the plugin.
+Here you will find all possible commands that can be used in the plugin.\
 <> = Required, [] = Optional
 
 ## /gunshell
 **Description:** All commands related to the Gunshell plugin.
-**Subcommands:**\
+**Subcommands:**
 | Subcommand                        | Permission                        | Description |
 | :------------------------------- | :------------------------------- | :----------- |
 | info       | gunshell.commands.gunshell.info                        | Shows information about the plugin. |
