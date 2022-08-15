@@ -15,6 +15,10 @@ If you need any further help with the plugin or just want to hang out you can jo
 
 ![Discord](https://discord.com/api/guilds/697454470249971833/widget.png?style=banner3)
 
+**Resourcepacks:**
+- 1.12.2: https://dash.gunshell.nl/downloads/Gunshell-v1.12.2.zip
+- 1.16+: https://dash.gunshell.nl/downloads/Gunshell-v1.16+.zip
+
 </center>
 
 ### Terms of Service
