@@ -7,17 +7,17 @@ hitbox-increase: 0.2
 
 ## config-version
 **Type:** ``STRING``\
-**Explanation:** This is the version of the config.yml file. DO NOT CHANGE THIS.
+**Explaination:** This is the version of the config.yml file. DO NOT CHANGE THIS.
 
 ## enable-developer-join-message
 **Type:** ``BOOLEAN``\
 **Default:** ``true``\
-**Explanation:** Developers of Gunshell have a special join message by default to credit them for their work. You can disable this message by setting this to false.
+**Explaination:** Developers of Gunshell have a special join message by default to credit them for their work. You can disable this message by setting this to false.
 
 ## per-weapon-cooldown
 **Type:** ``BOOLEAN``\
-**Explanation:** This is a boolean that determines if the cooldown of a weapon is per-weapon or per-player.
+**Explaination:** This is a boolean that determines if the cooldown of a weapon is per-weapon or per-player.
 
 ## hitbox-increase
 **Type:** ``DOUBLE``\
-**Explanation:** This is a value that determines the increase of the hitbox of a weapon.
+**Explaination:** This is a value that determines the increase of the hitbox of a weapon.
