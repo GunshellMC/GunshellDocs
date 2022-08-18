@@ -352,104 +352,104 @@ m1a:
 
 ## name
 **Type:** ``STRING``\
-**Explaination:** This is the name of the weapon item.
+**Explanation:** This is the name of the weapon item.
 
 ## lore
 **Type:** ``LIST``\
-**Explaination:** This is the lore of the weapon item.
+**Explanation:** This is the lore of the weapon item.
 
 ## hideItemFlags
 **Type:** ``BOOLEAN``\
 **Default:** ``true``\
-**Explaination:** This is a boolean that determines if the item should be hidden.
+**Explanation:** This is a boolean that determines if the item should be hidden.
 
 ## material
 **Type:** [``MATERIAL``](https://github.com/CryptoMorin/XSeries/blob/master/src/main/java/com/cryptomorin/xseries/XMaterial.java) \
-**Explaination:** This is the material of the weapon item.
+**Explanation:** This is the material of the weapon item.
 
 ## nbt.key
 **Type:** ``STRING``\
-**Explaination:** This is the key of the nbt tag.
+**Explanation:** This is the key of the nbt tag.
 
 ## nbt.value
 **Type:** ``STRING``\
-**Explaination:** This is the value of the nbt tag.
+**Explanation:** This is the value of the nbt tag.
 
 ## customModelData
 **Type:** ``INTEGER``\
-**Explaination:** This is the custom model data of the weapon item.
+**Explanation:** This is the custom model data of the weapon item.
 
 ## damage
 **Type:** ``INTEGER``\
-**Explaination:** This is the damage of the weapon.
+**Explanation:** This is the damage of the weapon.
 
 ## headshotDamage
 **Type:** ``INTEGER``\
-**Explaination:** This is the damage of the weapon when it is a headshot.
+**Explanation:** This is the damage of the weapon when it is a headshot.
 
 ## range
 **Type:** ``INTEGER``\
-**Explaination:** This is the range of the weapon.
+**Explanation:** This is the range of the weapon.
 
 ## minimumRange
 **Type:** ``INTEGER``\
-**Explaination:** This is the minimum range of the weapon.
+**Explanation:** This is the minimum range of the weapon.
 
 ## cooldown
 **Type:** ``DOUBLE``\
-**Explaination:** This is the cooldown of the weapon. This is in seconds.
+**Explanation:** This is the cooldown of the weapon. This is in seconds.
 
 ## grabCooldown
 **Type:** ``DOUBLE``\
-**Explaination:** This is the cooldown of the weapon when it is grabbed. This is in seconds.
+**Explanation:** This is the cooldown of the weapon when it is grabbed. This is in seconds.
 
 ## reloadTime
 **Type:** ``INTEGER``\
-**Explaination:** This is the reload time of the weapon. This is in seconds.
+**Explanation:** This is the reload time of the weapon. This is in seconds.
 
 ## maxAmmo
 **Type:** ``INTEGER``\
-**Explaination:** This is the maximum ammo of the weapon.
+**Explanation:** This is the maximum ammo of the weapon.
 
 ## ammunitionKeys
 **Type:** ``LIST``\
-**Explaination:** This is the list of ammunition keys that the weapon uses.
+**Explanation:** This is the list of ammunition keys that the weapon uses.
 
 ## sound
 **Type:** ``STRING``\
-**Explaination:** This is the sound of the weapon.
+**Explanation:** This is the sound of the weapon.
 
 ## reloadSound
 **Type:** ``STRING``\
-**Explaination:** This is the reload sound of the weapon.
+**Explanation:** This is the reload sound of the weapon.
 
 ## emptySound
 **Type:** ``STRING``\
-**Explaination:** This is the empty sound of the weapon.
+**Explanation:** This is the empty sound of the weapon.
 
 ## recoilAmount
 **Type:** ``INTEGER``\
-**Explaination:** This is the recoil amount of the weapon.
+**Explanation:** This is the recoil amount of the weapon.
 
 ## knockbackAmount
 **Type:** ``INTEGER``\
-**Explaination:** This is the amount of knockback the victim gets when they are hit by the weapon.
+**Explanation:** This is the amount of knockback the victim gets when they are hit by the weapon.
 
 ## selfKnockbackAmount
 **Type:** ``INTEGER``\
-**Explaination:** This is the amount of knockback the attacker gets when they shoot the weapon.
+**Explanation:** This is the amount of knockback the attacker gets when they shoot the weapon.
 
 ## scope.enabled
 **Type:** ``BOOLEAN``\
-**Explaination:** This is a boolean that determines if the weapon has a scope.
+**Explanation:** This is a boolean that determines if the weapon has a scope.
 
 ## scope.pumpkinBlurEnabled
 **Type:** ``BOOLEAN``\
-**Explaination:** This is a boolean that determines if the scope has a pumpkin blur effect.
+**Explanation:** This is a boolean that determines if the scope has a pumpkin blur effect.
 
 ## scope.amplifier
 **Type:** ``INTEGER``\
 **Default:** ``8``\
-**Explaination:** This is the amplifier of the scope.
+**Explanation:** This is the amplifier of the scope.
 
 
