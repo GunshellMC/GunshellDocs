@@ -1,27 +1,36 @@
 # Developer API
 
-The developer API is available via jitpack.io. To use it, you need to add it to your pom.xml or build.gradle file:
-
-::: warning
-The developer api has not been updated for the latest version of Gunshell yet.
-:::
+The developer API is available via nexus.sweetaurora.tech. To use it, you need to add it to your pom.xml or build.gradle file:
 
 ## Maven
 ::: details Maven
 ```xml
-	<repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
+    <repository>
+        <id>sweetaurora-maven</id>
+        <url>https://nexus.sweetaurora.tech/repository/public/</url>
+    </repository>
 ```
 
 ```xml
 	<dependency>
-	    <groupId>com.github.jazzkuh</groupId>
+	    <groupId>com.jazzkuh</groupId>
 	    <artifactId>Gunshell</artifactId>
-	    <version>1.0</version>
+	    <version>1.1</version>
 	</dependency>
+```
+:::
+
+## Gradle (Kotlin DSL)
+::: details Maven
+```kotlin
+    repositories {
+        maven { url = uri("https://nexus.sweetaurora.tech/repository/public/") }
+    }
+```
+
+```kotlin
+    dependencies {
+        compileOnly "com.jazzkuh:Gunshell:1.1"
+    }
 ```
 :::
