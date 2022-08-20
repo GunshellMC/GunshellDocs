@@ -21,7 +21,7 @@ The developer API is available via nexus.sweetaurora.tech. To use it, you need t
 :::
 
 ## Gradle (Kotlin DSL)
-::: details Maven
+::: details Gradle
 ```kotlin
     repositories {
         maven { url = uri("https://nexus.sweetaurora.tech/repository/public/") }
