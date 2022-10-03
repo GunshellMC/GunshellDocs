@@ -427,6 +427,14 @@ m1a:
 **Type:** ``STRING``\
 **Explanation:** This is the empty sound of the weapon.
 
+## soundVolume
+**Type:** ``DOUBLE``\
+**Explanation:** This is the volume of the sound.
+
+## soundRange
+**Type:** ``DOUBLE``\
+**Explanation:** This is the range of the sound.
+
 ## recoilAmount
 **Type:** ``INTEGER``\
 **Explanation:** This is the recoil amount of the weapon.
