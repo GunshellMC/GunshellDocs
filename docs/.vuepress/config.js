@@ -1,6 +1,6 @@
 // .vuepress/config.js
 module.exports = {
-	base: '/',
+	base: '/docs',
 	postcss: {
 		plugins: [
 			require('css-prefers-color-scheme/postcss'),
