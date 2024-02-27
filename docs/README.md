@@ -14,11 +14,12 @@ Welcome to the official documentation of [Gunshell](https://www.spigotmc.org/res
 If you need any further help with the plugin or just want to hang out you can join us on [Discord](https://discord.gg/AvRpCUZ)
 
 ![Discord](https://discord.com/api/guilds/697454470249971833/widget.png?style=banner3)
-
-**Resourcepack:**
-We currenly only support the **LATEST** Minecraft version (1.20.4). You can download the resourcepack for this version here: https://github.com/GunshellMC/Resourcepack/releases 
-
 </center>
+
+
+### ResourcePack
+We currenly only support the **LATEST** Minecraft version (1.20.4). 
+You can download the resourcepack for this version [here](https://github.com/GunshellMC/Resourcepack/releases)
 
 ### Terms of Service
 By downloading the plugin you automatically agree to the terms of service of this plugin, and you confirm that you have read them.
