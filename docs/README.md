@@ -15,9 +15,8 @@ If you need any further help with the plugin or just want to hang out you can jo
 
 ![Discord](https://discord.com/api/guilds/697454470249971833/widget.png?style=banner3)
 
-**Resourcepacks:**
-- 1.12.2: https://dash.gunshell.nl/downloads/Gunshell-v1.12.2.zip
-- 1.16+: https://dash.gunshell.nl/downloads/Gunshell-v1.16+.zip
+**Resourcepack:**
+We currenly only support the **LATEST** Minecraft version (1.20.4). You can download the resourcepack for this version here: https://github.com/GunshellMC/Resourcepack/releases 
 
 </center>
 
@@ -29,6 +28,5 @@ By downloading the plugin you automatically agree to the terms of service of thi
 - You are not allowed to remove or block the /gunshell command.
 - It is not allowed to edit, sell or redistribute this plugin without permission from the author (Jazzkuh).
 - Selling weapons, ammo, throwables, melee weapons or otherwise for real money is not allowed¹.
-- If your server does not obey these terms of service, access to the plugin may be restricted to that server. (We do not have to give a reason or inform you of this).
 
 *¹: This does not include adding Gunshell items to: ranks where the main reward is not the weapon or adding them to crates. We absolutely do not allow selling weapons in packs, individually or adding them as invite rewards on Discord which is against Discord's terms of service.*
