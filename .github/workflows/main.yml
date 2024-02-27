@@ -25,5 +25,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages
-        publish_dir: ./.vuepress/dist
+        publish_dir: ./.vuepress/dist/docs
         cname: docs.gunshell.nl
