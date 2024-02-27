@@ -5,68 +5,62 @@ This is the builtin configuration for the throwable config directory.
 
 ```yaml
 grenade:
-  name: "&9Grenade"
-  lore:
-    - '&6Officieel Minetopia Wapen'
-  material: IRON_INGOT
-  nbt:
-    key: "mtcustom"
-    value: "grenade_3"
-  damage: 16
-  range: 5
-  fuseTime: 4
-  cooldown: 5
-  knockbackAmount: 0.5
-  actionType: EXPLOSIVE
+    name: "&9Grenade"
+    lore:
+      - '&8&oBe careful with this one! Might explode...'
+    material: IRON_INGOT
+    customModelData: 1
+    damage: 16
+    range: 5
+    fuseTime: 4
+    cooldown: 5
+    knockbackAmount: 0.5
+    actionType: EXPLOSIVE
 molotov:
-  name: "&cMolotov"
-  lore:
-    - '&6Officieel Minetopia Wapen'
-  material: IRON_INGOT
-  nbt:
-    key: "mtcustom"
-    value: "grenade_1"
-  fuseTime: 2
-  cooldown: 5
-  actionType: MOLOTOV
-  options:
-    duration: 3
+    name: "&cMolotov"
+    lore:
+        - '&8&oBe careful with this one! Might explode...'
+    material: IRON_INGOT
+    customModelData: 2
+    fuseTime: 2
+    cooldown: 5
+    actionType: MOLOTOV
+    options:
+        duration: 3
 flashbang:
-  name: "&9Flashbang"
-  lore:
-    - '&6Officieel Minetopia Wapen'
-  material: IRON_INGOT
-  nbt:
-    key: "mtcustom"
-    value: "grenade_4"
-  range: 4
-  fuseTime: 2
-  cooldown: 5
-  actionType: FLASHBANG
-  options:
-    duration: 10
-    amplifier: 1
+    name: "&9Flashbang"
+    lore:
+        - '&8&oBe careful with this one! Might explode...'
+    material: IRON_INGOT
+    customModelData: 2
+    range: 4
+    fuseTime: 2
+    cooldown: 5
+    actionType: FLASHBANG
+    options:
+        duration: 10
+        amplifier: 1
 
-dev_credit:
-  name: "&5Dev Credit"
-  lore:
-    - '&6Officieel Minetopia Wapen'
-  material: REDSTONE_TORCH
-  range: 6
-  fuseTime: 4
-  cooldown: 5
-  knockbackAmount: 0.5
-  actionType: END_CREDITS
-dev_credit2:
-  name: "&5Dev Credit (Demo Menu)"
-  lore:
-    - '&6Officieel Minetopia Wapen'
-  material: REDSTONE_TORCH
-  range: 6
-  fuseTime: 4
-  cooldown: 5
-  knockbackAmount: 0.5
-  actionType: DEMO_MENU
+dev_credit_end:
+    name: "&5Dev Credit (End Credits)"
+    lore:
+      - '&8&oJokes from the developers!'
+    material: REDSTONE_TORCH
+    range: 6
+    fuseTime: 4
+    cooldown: 5
+    knockbackAmount: 0.5
+    actionType: END_CREDITS
+dev_credit_demo:
+    name: "&5Dev Credit (Demo Menu)"
+    lore:
+        - '&8&oJokes from the developers!'
+    material: REDSTONE_TORCH
+    range: 6
+    fuseTime: 4
+    cooldown: 5
+    knockbackAmount: 0.5
+    actionType: DEMO_MENU
 ```
 
 ## name
