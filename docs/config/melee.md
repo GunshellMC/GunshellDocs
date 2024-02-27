@@ -4,73 +4,23 @@
 This is the builtin configuration for the melee config directory.
 
 ```yaml
-karambit:
-  name: "&9Karambit"
+machete:
+  name: "&9Machete"
   lore:
-    - '&6Officieel Minetopia Wapen.'
-    - ''
     - '&7Durability: &f<Durability>'
-  material: GOLD_SWORD
-  nbt:
-    key: "mtcustom"
-    value: "knife1"
+  material: WOODEN_HOE
+  customModelData: 1
   damage: 6
   cooldown: 1
   grabCooldown: 1
   actionType: DAMAGE
-lama_pickaxe:
-  name: "&9Lama Pickaxe"
+knife:
+  name: "&9Knife"
   lore:
-    - '&6Officieel Minetopia Wapen.'
-    - ''
     - '&7Durability: &f<Durability>'
-  material: GOLD_SWORD
-  nbt:
-    key: "mtcustom"
-    value: "lama_pickaxe"
+  material: WOODEN_HOE
+  customModelData: 2
   damage: 5
-  cooldown: 1
-  grabCooldown: 1
-  actionType: DAMAGE
-knuppel_birch:
-  name: "&9Knuppel Birch"
-  lore:
-    - '&6Officieel Minetopia Wapen.'
-    - ''
-    - '&7Durability: &f<Durability>'
-  material: FERMENTED_SPIDER_EYE
-  nbt:
-    key: "mtcustom"
-    value: "knuppel_birch"
-  damage: 6
-  cooldown: 1
-  grabCooldown: 1
-  actionType: DAMAGE
-zakmes:
-  name: "&9Zakmes"
-  lore:
-    - '&6Officieel Minetopia Wapen.'
-    - ''
-    - '&7Durability: &f<Durability>'
-  material: WOODEN_SWORD
-  nbt:
-    key: "mtcustom"
-    value: "zakmes"
-  damage: 5
-  cooldown: 1
-  grabCooldown: 1
-  actionType: DAMAGE
-boksbeugel:
-  name: "&9Boksbeugel"
-  lore:
-    - '&6Officieel Minetopia Wapen.'
-    - ''
-    - '&7Durability: &f<Durability>'
-  material: WOODEN_SWORD
-  nbt:
-    key: "mtcustom"
-    value: "boksbeugel"
-  damage: 4
   cooldown: 1
   grabCooldown: 1
   actionType: DAMAGE
