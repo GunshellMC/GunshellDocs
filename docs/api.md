@@ -1,6 +1,6 @@
 # Developer API
 
-The developer API is available via nexus.sweetaurora.tech. To use it, you need to add it to your pom.xml or build.gradle file:
+The developer API is available via nexus.jazzkuh.com. To use it, you need to add it to your pom.xml or build.gradle file:
 
 ## Maven
 ::: details Maven
