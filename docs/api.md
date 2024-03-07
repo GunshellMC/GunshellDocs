@@ -6,8 +6,8 @@ The developer API is available via nexus.sweetaurora.tech. To use it, you need t
 ::: details Maven
 ```xml
     <repository>
-        <id>sweetaurora-maven</id>
-        <url>https://nexus.sweetaurora.tech/repository/public/</url>
+        <id>jazzkuh-maven</id>
+        <url>https://nexus.jazzkuh.com/repository/public/</url>
     </repository>
 ```
 
@@ -15,7 +15,7 @@ The developer API is available via nexus.sweetaurora.tech. To use it, you need t
 	<dependency>
 	    <groupId>com.jazzkuh</groupId>
 	    <artifactId>Gunshell</artifactId>
-	    <version>1.1</version>
+	    <version>1.6.1</version>
 	</dependency>
 ```
 :::
@@ -24,13 +24,13 @@ The developer API is available via nexus.sweetaurora.tech. To use it, you need t
 ::: details Gradle
 ```kotlin
     repositories {
-        maven { url = uri("https://nexus.sweetaurora.tech/repository/public/") }
+        maven { url = uri("https://nexus.jazzkuh.com/repository/public/") }
     }
 ```
 
 ```kotlin
     dependencies {
-        compileOnly "com.jazzkuh:Gunshell:1.1"
+        compileOnly "com.jazzkuh:Gunshell:1.6.1"
     }
 ```
 :::
