@@ -2,6 +2,10 @@
 title: Nginx Reverse Proxy with Cloudflare SSL
 ---
 
+::: tip
+This tutorial was made by [Tiebienotjuh07](https://github.com/Tiebienotjuh).
+:::
+
 # Reverse Proxy
 
 ::: warning Note
