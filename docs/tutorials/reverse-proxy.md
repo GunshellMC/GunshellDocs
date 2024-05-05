@@ -1,130 +1,136 @@
-# NGINX Reverse Proxy
+---
+title: Nginx Reverse Proxy with Cloudflare SSL
+---
 
-::: tip
-Deze tutorial is gemaakt door [Tiebienotjuh07](https://github.com/Tiebienotjuh)
+# Reverse Proxy
+
+::: warning Note
+This tutorial was written and tested for Ubuntu 18.04 and above. Other operating systems may work if you use the correct package manager. This has not been tested by me.
 :::
 
-## Nginx Reverse Proxy - Ubuntu **(LetsEncrypt)**
+## Before we start
 
-Aangeraden om je package manager eerst te updaten
-``sudo apt-get update && sudo apt update``
+Make sure your system is up to date to avoid problems! You can update your package manager (APT) with `apt-get update` and update your packages with `apt update`.
 
-Stap **1**)
-> Installeer nginx & certbot met de volgende commando's:
-> ``sudo apt install nginx && sudo apt install -y certbot``
+If you are not a root user, please type `sudo` before every command.
 
-Stap **2**)
-> Zorg dat het domein (in dit voorbeeld `test.tiebienotjuh.be`) naar het ip van de vps wijst (A Record)
+## Get SSL Certificate
 
-Stap **3**)
-> Maak een SSL Certificaat via LetsEncrypt/Certbot met volgende commando
-> ``sudo certbot certonly -d test.tiebienotjuh.be``
-> test.tiebienotjuh.be vervangen door jouw domein
+### Installing packages
 
-Stap **4**)
-> Maak een nginx config bestand door onderstaand commando uit te voeren:
-> ``sudo nano /etc/nginx/sites-available/reverse.conf``
-> plaats onderstaande text in het config bestand.
+To request the SSL certificate from CloudFlare, we utilize the acme.sh script, which is installed through the GitHub repository using the cURL package.
 
-```
-server {
-    listen 80;
-    server_name <DOMAIN>;
+With the following command, you'll install the cURL package, fetch the acme.sh script from GitHub, and install the script on your server. Afterward, you'll update bash to ensure the script functions correctly.
 
-    return 301 https://$server_name$request_uri;
-}
-server {
-    listen 443 ssl http2;
-    server_name <DOMAIN>;
-
-    ssl_certificate /etc/letsencrypt/live/<DOMAIN>/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/<DOMAIN>/privkey.pem;
-
-    location / {
-        proxy_pass http://<IP>:<PORT>/;
-    }
-}
+```bash
+apt install curl && curl https://get.acme.sh | sh -s email=<EMAIL> && source ~/.bashrc
 ```
 
-> Vervang `<DOMAIN>` door uw domein.
-> Vervang `<IP>` door het ip adres van uw vps.
-> Vervang `<PORT>` door de poort waar het proces op draait.
+Replace `<EMAIL>` with the email address you used to create your Cloudflare account.
 
-Stap **5**)
-> Maak een systemlink tussen de config bestanden met onderstaande commando:
-> `sudo ln -s /etc/nginx/sites-available/reverse.conf /etc/nginx/sites-enabled/reverse.conf`
+### Authentication
 
-Stap **6**)
-> Restart nginx en normaal gezien is je site nu bereikbaar via het ingestelde domeinnaam!
-> `sudo service nginx restart`
+Before requesting our SSL certificate from Cloudflare, we need to authenticate with Cloudflare. To do this, we must set our CloudFlare email and API Key as server environment variables so that the acme.sh script can access and use them.
 
-## Nginx Reverse Proxy - Ubuntu **(Cloudflare)**
+To simplify this process, you can obtain the Cloudflare Global API Key on the following [page](https://dash.cloudflare.com/profile/api-tokens). Then, you can use the following commands to set your Cloudflare Email and API Key in the environment variables:
 
-**!** Jouw domein moet blijf cloudflare staan en je SSL Settings op 'full' of 'full (strict)'.
-
-Aangeraden om je package manager eerst te updaten
-``sudo apt-get update && sudo apt update``
-
-Stap **1**)
-> Installeer nginx & acme.sh met de volgende commando's:
-> ``sudo apt install nginx && curl  https://get.acme.sh | sh -s email=JOUWCLOUDFLAREEMAIL && source ~/.bashrc``
-> Vervang `JOUWCLOUDFLAREEMAIL` door uw email van cloudflare (waar het domein op staat)
-
-Stap **2**)
-> Zorg dat het domein (in dit voorbeeld `test.tiebienotjuh.be`) naar het ip van de vps wijst (A Record) (**PROXIED**)
-
-Stap **3**)
-> Haal uw persoonlijke cloudflare `Global API Key` op via volgende link:
-> https://dash.cloudflare.com/profile/api-tokens
-
-Stap **4**)
-> Stel uw gegeven in bij acme.sh met onderstaande commando's: 
-> ``export CF_Key="GLOBALAPIKEY``
-> ``export CF_Email="JOUWCLOUDFLAREEMAIL"``
-> Vervang `GLOBALAPIKEY` door de key die u bij stap 3 hebt opgehaald.
-> Vervang `JOUWCLOUDFLAREEMAIL` door het email die bij stap 1 hebt meegegeven bij de installatie van acme.sh
-
-Stap **5**)
-> Maak een nginx config bestand door onderstaand commando uit te voeren:
-> ``sudo nano /etc/nginx/sites-available/reverse.conf``
-> plaats onderstaande text in het config bestand.
-
+```bash
+export CF_Key="<API_KEY>"
+export CF_Email="<EMAIL>"
 ```
-server {
-    listen 80;
-    server_name <DOMAIN>;
 
-    return 301 https://$server_name$request_uri;
-}
-server {
-    listen 443 ssl http2;
-    server_name <DOMAIN>;
+Replace `<API_KEY>` with the API Key you generated in the previous step and `<EMAIL>` with the email address you used to create your Cloudflare account.
 
-    ssl_certificate /etc/letsencrypt/live/<DOMAIN>/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/<DOMAIN>/privkey.pem;
+### Request SSL
 
-    location / {
-        proxy_pass http://<IP>:<PORT>/;
-    }
-}
+Before requesting the SSL certificate from Cloudflare, we need to create a directory where we will store the SSL certificate files. In this tutorial, we will use `/etc/ssl/example.com` as the directory.
+
+Create a directory with the following command:
+
+```bash
+mkdir /etc/ssl/<DOMAIN>
 ```
-Vervang `<DOMAIN>` door uw domein.
-Vervang `<IP>` door het ip adres van uw vps.
-Vervang `<PORT>` door de poort waar het proces op draait.
 
-Stap **6**)
-Maak het SSL Certificaat met onderstaand commando:
-```
+::: tip Note
+Make sure to replace `<DOMAIN>` with your domain in the above and all following commands.
+:::
+
+Now we can request the SSL Certificate from Cloudflare using the acme.sh script.
+
+```bash
 acme.sh --issue --dns dns_cf -d "<DOMAIN>" \
---key-file /etc/letsencrypt/live/<DOMAIN>/privkey.pem \
---fullchain-file /etc/letsencrypt/live/<DOMAIN>/fullchain.pem
+--key-file /etc/ssl/<DOMAIN>/privkey.pem \
+--fullchain-file /etc/ssl/<DOMAIN>/fullchain.pem
 ```
-Vervang `<DOMAIN>` door uw domein.
 
-Stap **7**)
-Maak een systemlink tussen de config bestanden met onderstaande commando:
-`sudo ln -s /etc/nginx/sites-available/reverse.conf /etc/nginx/sites-enabled/reverse.conf`
+## Nginx Configuration
 
-Stap **8**)
-Restart nginx en normaal gezien is je site nu bereikbaar via het ingestelde domeinnaam!
-`sudo service nginx restart`
+Now comes the somewhat simpler part of the tutorial.
+
+We are going to create the Nginx configuration for the reverse proxy. First, we need to create an Nginx configuration file in the `sites-available` folder and create a symbolic link to it in the `sites-enabled` folder. You can create a symlink with the next command:
+
+```bash
+sudo ln -s /etc/nginx/sites-available/reverse.conf /etc/nginx/sites-enabled/reverse.conf
+```
+
+We assume your nginx configuration file is called `reverse.conf`.
+
+To force the SSL certificate, we create an automatic HTTPS forwarder. You can easily achieve this by adding the following code to your Nginx configuration:
+
+```nginx
+server {
+    listen 80;
+    server_name <DOMAIN>;
+
+    return 301 https://$server_name$request_uri;
+}
+```
+
+Next, we set up a server listener on port 443 (HTTPS port) and redirect it with the SSL certificate to our application using the following code:
+
+```nginx
+server {
+    listen 443 ssl http2;
+    server_name <DOMAIN>;
+
+    ssl_certificate /etc/ssl/<DOMAIN>/fullchain.pem;
+    ssl_certificate_key /etc/ssl/<DOMAIN>/privkey.pem;
+
+    location / {
+        proxy_pass http://<IP>:<PORT>/;
+    }
+}
+```
+
+When you combine all of this, your Nginx configuration will look like this:
+
+```nginx
+server {
+    listen 80;
+    server_name <DOMAIN>;
+
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name <DOMAIN>;
+
+    ssl_certificate /etc/ssl/<DOMAIN>/fullchain.pem;
+    ssl_certificate_key /etc/ssl/<DOMAIN>/privkey.pem;
+
+    location / {
+        proxy_pass http://<IP>:<PORT>/;
+    }
+}
+```
+
+Remember to replace `<DOMAIN>`, `<IP>`, and `<PORT>` with your actual domain, IP address, and port of your application.
+
+And now, your Reverse Proxy is set up! To start using it, you can restart or reload Nginx with the following command:
+
+```bash
+service nginx restart
+```
+
+Your Nginx Reverse Proxy should work now!
