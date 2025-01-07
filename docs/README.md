@@ -1,12 +1,12 @@
 # Gunshell Documentation
 
-![Gunshell Banner](https://i.imgur.com/R2NBe8B.png)
+![Gunshell Banner](https://docs.gunshell.nl/gunshell_banner.png)
 
 <center>
 
 [![MIT License](https://img.shields.io/github/license/Jazzkuh/Gunshell?&logo=github)](License)
-![Spiget Downloads](https://img.shields.io/spiget/downloads/76350?label=Downloads)
-![Spiget Version](https://img.shields.io/spiget/version/76350?color=red&label=Version)
+![Modrinth Downloads](https://img.shields.io/modrinth/dt/gunshell)
+![Modrinth Version](https://img.shields.io/modrinth/v/gunshell)
 ![Join us on Discord](https://img.shields.io/discord/811987858402574366.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)
 
 Welcome to the official documentation of [Gunshell](https://www.spigotmc.org/resources/76350/).
